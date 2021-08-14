@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'icomoon';
+  // src:  url('fonts/icomoon.eot?gav1m');
+  src:
+    url('~@/assets/fonts/icomoon/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-cellar:before {
+  content: "\e91f";
+}
+
+.icon-icon-star-empty:before {
+  content: "\e91e";
+}
+
+.icon-icon-arrow-right:before {
+  content: "\e914";
+  color: #eae8d8;
+}
+
+.icon-icon-artricle:before {
+  content: "\e900";
+}
+
+.icon-icon-bags:before {
+  content: "\e901";
+}
+
+.icon-icon-trip-advisor:before {
+  content: "\e902";
+}
+
+.icon-icon-camera:before {
+  content: "\e903";
+}
+
+.icon-icon-cart:before {
+  content: "\e904";
+}
+
+.icon-icon-compass:before {
+  content: "\e905";
+}
+
+.icon-icon-facebook:before {
+  content: "\e906";
+}
+
+.icon-icon-instagram:before {
+  content: "\e907";
+}
+
+.icon-icon-location:before {
+  content: "\e908";
+}
+
+.icon-icon-login:before {
+  content: "\e909";
+}
+
+.icon-icon-logout:before {
+  content: "\e90a";
+}
+
+.icon-icon-loop:before {
+  content: "\e90b";
+}
+
+.icon-icon-passport:before {
+  content: "\e90c";
+}
+
+.icon-icon-pencil:before {
+  content: "\e90d";
+}
+
+.icon-icon-price:before {
+  content: "\e90e";
+}
+
+.icon-icon-shop:before {
+  content: "\e90f";
+}
+
+.icon-icon-twitter:before {
+  content: "\e910";
+}
+
+.icon-icon-wine:before {
+  content: "\e911";
+}
+
+.icon-icon-write:before {
+  content: "\e912";
+}
+
+.icon-icon-youtube:before {
+  content: "\e913";
+}

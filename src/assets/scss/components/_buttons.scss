@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 100px;
+  height: 90px;
+  height: 8.79vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow $animation-speed ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 40px rgba(127, 127, 127, 0.4);
+  }
+
+  &--light {
+    background-color: $white;
+    color: #8E9AD5;
+  }
+
+  &--purple {
+    background: linear-gradient(266.19deg, #8049C7 0%, #CA57FD 100%);
+    color: $white;
+  }
+
+  &--blue {
+    background: linear-gradient(266.19deg, #169AE4 0%, #0CC4FA 100%);
+    color: $white;
+  }
+
+  &--yellow {
+    color: $white;
+    background: linear-gradient(90deg, #FFD748 0.02%, rgba(195, 199, 11, 0.96) 99.97%, #CAC6AB 99.98%, #D3E9E1 99.99%);
+  }
+
+  &--gray {
+    background: linear-gradient(90deg, #D9D9D9 0%, #A1A1A1 100%);
+    color: $white;
+  }
+}

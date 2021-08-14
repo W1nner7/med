@@ -1,0 +1,122 @@
+#app .vue-tinder {
+  border-radius: 40px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 12.69%;
+  margin: auto;
+  width: 55.67%;
+  height: 57.62%;
+
+  @include media('portrait') {
+    height: 45%;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+}
+
+.nope-pointer,
+.like-pointer {
+  position: absolute;
+  z-index: 1;
+  width: 66%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-40%) rotate(-15deg);
+}
+
+.nope-pointer {}
+
+.like-pointer {
+  transform: translateX(-50%) translateY(-40%) rotate(15deg);
+}
+
+.super-pointer,
+.down-pointer {
+  position: absolute;
+  z-index: 1;
+  width: 66%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-40%) rotate(-15deg);
+}
+
+.super-pointer {}
+
+.down-pointer {
+  top: 40px;
+}
+
+.rewind-pointer {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 10px;
+  width: 112px;
+  height: 78px;
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.btns {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  margin: auto;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 355px;
+}
+
+.btns img {
+  margin-right: 12px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btns img:nth-child(2n + 1) {
+  width: 53px;
+}
+
+.btns img:nth-child(2n) {
+  width: 65px;
+}
+
+.btns img:nth-last-child(1) {
+  margin-right: 0;
+}
+
+/* .vue-tinder.right-end,
+.vue-tinder.left-end {
+  transform: translateZ(20px);
+}
+.vue-tinder.right-end .tinder-card:nth-child(1) {
+  animation: rightEnd 0.2s ease-in-out;
+}
+.vue-tinder.left-end .tinder-card:nth-child(1) {
+  animation: leftEnd 0.2s ease-in-out;
+}
+@keyframes leftEnd {
+  50% {
+    transform: rotateY(8deg);
+  }
+}
+@keyframes rightEnd {
+  50% {
+    transform: rotateY(-8deg);
+  }
+} */

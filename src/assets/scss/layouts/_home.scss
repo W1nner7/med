@@ -1,0 +1,60 @@
+// HOME PAGE
+.home {
+  background-image: url('../img/intro-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  color: $white;
+
+  &__content-holder {
+    margin: -30px 0 0 110px;
+    border-radius: 50%;
+    width: 83.4vh;
+    padding-bottom: 83.4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(63.53deg, #2D8550 16.62%, #5E6EC2 83.38%);
+    position: relative;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+
+    &>span {
+      font-size: 36px;
+      font-weight: 300;
+      display: inline-block;
+      margin-bottom: 2.8vh;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 11.72vh;
+
+      span {
+        font-size: 70px;
+        display: block;
+
+        @include media ('<=desktop') {
+          font-size: 50px;
+        }
+      }
+
+      @include media ('<=desktop') {
+        font-size: 40px;
+      }
+    }
+
+    .btn {
+      font-size: 36px;
+      width: 73.07%;
+      color: #8E9AD5;
+    }
+  }
+}

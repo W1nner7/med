@@ -1,0 +1,395 @@
+// forms
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+//input[type='url'],
+// input[type='date'],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid $form-element-border-color;
+  padding: $form-element-padding;
+  font-size: 16px;
+  -webkit-transition: border-color $animation-speed ease-in-out;
+  -o-transition: border-color $animation-speed ease-in-out;
+  transition: border-color $animation-speed ease-in-out;
+
+  &:focus {
+    // border-color: $form-element-focus-border-color;
+    border-color: $blue-light;
+    outline: transparent;
+  }
+
+  @include placeholder {
+    color: $placeholder-color;
+  }
+}
+
+select {
+  -webkit-border-radius: 0;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  cursor: pointer;
+}
+
+.form {
+  &__row {
+    margin-bottom: 22px;
+  }
+
+  label {
+    color: $white;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: block;
+    -webkit-transition: color $animation-speed ease-in-out;
+    -o-transition: color $animation-speed ease-in-out;
+    transition: color $animation-speed ease-in-out;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    background-color: $white;
+    height: 52px;
+    padding: 15px 20px;
+
+    ::-webkit-input-placeholder {
+      color: $gray;
+      font-weight: 600;
+
+    }
+
+    ::-moz-placeholder {
+      color: $gray;
+      font-weight: 600;
+
+    }
+
+    :-ms-input-placeholder {
+      color: $gray;
+      font-weight: 600;
+
+    }
+
+    ::-ms-input-placeholder {
+      color: $gray;
+      font-weight: 600;
+
+    }
+
+    ::placeholder {
+      color: $gray;
+      font-weight: 600;
+
+    }
+
+    &[type="password"] {
+      padding-top: 15px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      padding-top: 25px;
+      transition: padding-top $animation-speed ease-in-out;
+
+      &.active {
+        padding-top: 15px;
+
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+
+      &::placeholder {
+        font-size: 18px;
+        opacity: 1;
+        transition: opacity $animation-speed ease-in-out;
+      }
+    }
+  }
+
+  input,
+  button {
+    &[type='submit'] {
+      color: $white;
+    }
+  }
+
+  label.form__label-check {
+    padding-left: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 23px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0;
+    position: relative;
+
+    span.form__checkbox {
+      margin-bottom: 0 !important;
+    }
+
+  }
+
+  input[type="checkbox"] {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+
+    &:checked {
+      &+.form__checkbox {
+        img {
+          opacity: 1;
+        }
+
+        &:active {
+          &::before {
+            content: '';
+            width: 48px;
+            height: 48px;
+            background-color: rgba(155, 198, 234, 0.4);
+            position: absolute;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+            -webkit-transition: background-color $animation-speed ease-in-out;
+            -o-transition: background-color $animation-speed ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    background-color: $white;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+
+    &:active {
+      &::before {
+        background-color: rgba(255, 255, 255, 0.2);
+        -webkit-transition: background-color $animation-speed ease-in-out;
+        -o-transition: background-color $animation-speed ease-in-out;
+        transition: background-color $animation-speed ease-in-out;
+      }
+    }
+
+    img {
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      opacity: 0;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      -webkit-transition: opacity $animation-speed ease-in-out;
+      -o-transition: opacity $animation-speed ease-in-out;
+      transition: opacity $animation-speed ease-in-out;
+    }
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+      &~.form__radio {
+        &::before {
+          opacity: 1;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  &__radio-container {
+    position: relative;
+    padding-top: 34px;
+  }
+
+  &__radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background-color: $blue;
+      border-radius: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      opacity: 0;
+      -webkit-transition: background-color $animation-speed ease-in-out,
+        opacity $animation-speed ease-in-out;
+      -o-transition: background-color $animation-speed ease-in-out,
+        opacity $animation-speed ease-in-out;
+      transition: background-color $animation-speed ease-in-out,
+        opacity $animation-speed ease-in-out;
+    }
+  }
+
+  &__row {
+    position: relative;
+
+    &--focused {
+
+      label {
+        color: $blue-light;
+      }
+
+      input {
+        outline: transparent;
+        border-color: $blue-light;
+      }
+    }
+
+    &--invalid {
+      label {
+        color: $red;
+      }
+
+      input {
+        outline: transparent;
+        border-color: $red !important;
+      }
+
+      .form__row-info {
+        color: $red;
+        display: block;
+        position: absolute;
+        bottom: -17px;
+
+        @include media('<360px') {
+          bottom: -34px;
+        }
+      }
+    }
+
+    &--invalid-select {
+      .v-select {
+        outline: 2px solid red;
+      }
+
+      label {
+        color: $red;
+      }
+
+      .form__row-info {
+        color: $red;
+        display: block;
+        position: absolute;
+        bottom: -17px;
+
+        @include media('<360px') {
+          bottom: -34px;
+        }
+      }
+    }
+  }
+
+  &__row-info {
+    font-size: 13px;
+    font-weight: 600;
+    position: absolute;
+    bottom: -17px;
+  }
+
+  &--invalid {
+    color: $red;
+    font-size: 13px;
+    font-weight: 600;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity $animation-speed ease-in-out;
+    -o-transition: opacity $animation-speed ease-in-out;
+    transition: opacity $animation-speed ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+// VUE SELECT
+input[type='search'].vs__search {
+  border-color: transparent;
+  margin: 0;
+
+  padding: 0 0 0px 14px;
+
+  &:focus {
+    padding: 0 0 0px 16px;
+  }
+}
+
+// Error msg on pages 
+.signUp,
+.signIn,
+.isProfile {
+  .form__row--invalid .form__row-info {
+    bottom: -17px;
+  }
+}
+
+.signUp {
+  .form__row--invalid-select .form__row-info {
+    bottom: -17px;
+  }
+}
+
+// Profile size msg
+.input-errors.input-errors--size .form__row-info {
+  bottom: 0;
+}
